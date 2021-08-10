@@ -13,12 +13,13 @@ import Typography from "@material-ui/core/Typography";
 import kevin from '../images/Kevin.jpg';
 import juan from '../images/juan.jpg';
 import charles from '../images/charlie.jpg';
+import Maegli from '../images/Maegli.png';
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
     background: "#282c34",
     height: "100%",
-    marginTop: -170
+    marginTop: -225
   },
   cardContainer: {
     maxWidth: 325,
@@ -44,6 +45,11 @@ const projects = [
     name: "Charles Fernández",
     description: `Charles Fernández es un pentatleta moderno guatemalteco. Compitió en los Juegos Olímpicos de Verano 2016 en el evento masculino y terminó decimoquinto.`,
     image: charles
+  },
+  {
+    name: "Juan Maegli",
+    description: `Juan Ignacio Maegli Agüero es un regatista guatemalteco, campeón nacional entre los años 1998 y 2000, campeón de los Juegos Panamericanos de Río de Janeiro 2007, Toronto 2015 y Lima 2019, además de campeón centroamericano y del Caribe de los Juegos de Mayagüez 2010, Veracruz 2014 y Barranquilla 2018.`,
+    image: Maegli
   }
 
 ];
@@ -52,7 +58,7 @@ const Informacion = () => {
   const classes = useStyles();
   return (
     <Box component="div" className={classes.mainContainer}>
-      <Grid container justify="center">
+      <Grid container justifyContent="center">
         {projects.map((project, i) => (
           <Grid item xs={12} sm={8} md={4} key={i}>
             <Card className={classes.cardContainer}>
